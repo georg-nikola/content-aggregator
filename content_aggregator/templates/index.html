@@ -1,13 +1,19 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block content %}
-    <div class="header">
-        <h1>Welcome to {{ title }}</h1>
-    </div>
-    <div class="content">
-        <p>This is a content aggregator site. Check out the latest articles <a href="/articles/">here</a>.</p>
+<div class="container">
+    <div class="jumbotron mt-5">
+        <h1 class="display-4">Welcome to Content Aggregator!</h1>
+        <p class="lead">This is a simple content aggregator site. Check out the latest articles here.</p>
+        <hr class="my-4">
+        <p>Enter a URL to extract data from:</p>
         <form>
-            <input type="text" id="url" name="url" placeholder="Enter URL here">
-            <input type="submit" value="Extract Data">
+            <div class="form-group">
+                <input type="text" class="form-control" id="url" name="url" placeholder="Enter URL here">
+            </div>
+            <button type="submit" class="btn btn-primary">Extract Data</button>
         </form>
     </div>
+</div>
 {% endblock %}
