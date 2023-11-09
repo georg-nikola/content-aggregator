@@ -14,4 +14,4 @@ def article_list_view(request):
 
 def article_detail_view(request, pk):
     article = get_object_or_404(Article, pk=pk)
-    return render(request, 'article_detail.html', {'article': article, 'url': 'http://example.com'})
+    return render(request, 'article_detail.html', {'article': article, 'url': 'https://blog.georg-nikola.com/'})
