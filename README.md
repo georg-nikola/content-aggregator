@@ -1,13 +1,47 @@
-# GitHub Codespaces ♥️ Django
+# Content Aggregator
 
-Welcome to your shiny new Codespace running Django! We've got everything fired up and running for you to explore Django.
+Content Aggregator is a Django-based web application that aggregates content from various sources.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+## Features
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+- Feature 1
+- Feature 2
+- Feature 3
 
-To run this application:
+## Installation
 
-```python
-python manage.py runserver
-```
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/content-aggregator.git
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd content-aggregator
+    ```
+
+3. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+1. Apply the migrations:
+    ```bash
+    python manage.py migrate
+    ```
+
+2. Run the server:
+    ```bash
+    python manage.py runserver
+    ```
+
+3. Open your web browser and navigate to `http://localhost:8000`.
+
+## Running Tests
+
+To run the tests, use the following command:
+
+```bash
+python manage.py test
