@@ -15,3 +15,7 @@ def article_list_view(request):
 def article_detail_view(request, pk):
     article = get_object_or_404(Article, pk=pk)
     return render(request, 'article_detail.html', {'article': article, 'url': 'https://blog.georg-nikola.com/'})
+
+def landing_page(request):
+    # your code here
+    return render(request, 'landing_page.html')
