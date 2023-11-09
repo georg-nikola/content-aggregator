@@ -17,3 +17,28 @@ body {
   justify-content: center;
   text-align: center;
 }
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --background-color: #333333;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  /* Adjust styles for smaller screens */
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Adjust styles for medium screens */
+}
+
+@media (min-width: 1025px) {
+  /* Adjust styles for large screens */
+}

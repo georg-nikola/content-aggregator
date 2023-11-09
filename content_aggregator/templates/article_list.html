@@ -1,16 +1,16 @@
-<!-- article_list.html -->
+<!-- aggregation_list.html -->
 
 {% extends 'base.html' %}
 
-{% block title %}Article List{% endblock %}
+{% block title %}aggregation List{% endblock %}
 
 {% block content %}
-    <h1>Article List</h1>
+    <h1>aggregation List</h1>
     <ul>
-        {% for article in articles %}
-            <li><a href="{% url 'article_detail' article.id %}">{{ article.title }}</a></li>
+        {% for aggregation in aggregations %}
+            <li><a href="{% url 'aggregation_detail' aggregation.id %}">{{ aggregation.title }}</a></li>
         {% empty %}
-            <li>No articles found.</li>
+            <li>No aggregations found.</li>
         {% endfor %}
     </ul>
 {% endblock %}
