@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from aggregator.models import Article
+from django.http import Http404
 
 def index(request):
     context = {
@@ -19,3 +20,7 @@ def article_detail_view(request, pk):
 def landing_page(request):
     # your code here
     return render(request, 'landing_page.html')
+
+def error_404(request, pk):
+    if not Article.objects.filter(pk=pk).exists():
+        raise Http404("Article does not exist")
