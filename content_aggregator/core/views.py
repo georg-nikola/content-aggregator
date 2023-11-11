@@ -23,6 +23,6 @@ def error_404(request, pk):
 
 def home_view(request):
     context = {
-        "title": "Django example",
+        "title": "Content Aggregator",
     }
     return render(request, "index.html", context)
