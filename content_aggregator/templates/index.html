@@ -8,7 +8,8 @@
         <p class="lead">This is a simple content aggregator site. Check out the latest aggregations here.</p>
         <hr class="my-4">
         <p>Enter a URL to extract data from:</p>
-        <form>
+        <form method="post" action="{% url 'extract' %}">
+            {% csrf_token %}
             <div class="form-group">
                 <input type="text" class="form-control" id="url" name="url" placeholder="Enter URL here">
             </div>
