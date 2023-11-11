@@ -20,3 +20,9 @@ def aggregation_detail_view(request, pk):
 def error_404(request, pk):
     if not aggregation.objects.filter(pk=pk).exists():
         raise Http404("aggregation does not exist")
+
+def home_view(request):
+    context = {
+        "title": "Django example",
+    }
+    return render(request, "index.html", context)

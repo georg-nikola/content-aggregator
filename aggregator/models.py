@@ -1,6 +1,6 @@
 from django.db import models
 
-class Aggregation(models.Model):
+class aggregation(models.Model):
     aggregated_date = models.DateTimeField(auto_now_add=True)
     data = models.JSONField()
 
