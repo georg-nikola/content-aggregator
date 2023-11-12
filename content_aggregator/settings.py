@@ -93,12 +93,13 @@ if os.getenv("DB_NAME") == "postgres":
             "PORT": os.getenv("DB_PORT"),
         }
     }
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
     }
-}
 
 
 # Password validation
@@ -148,3 +149,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 if os.getenv("REDIS_HOST"):
     CELERY_BROKER_URL = f'redis://{os.getenv("REDIS_HOST")}:6379/0'
     CELERY_RESULT_BACKEND = f'redis://{os.getenv("REDIS_HOST")}:6379/0'
+else:
+    CELERY_BROKER_URL = "redis://localhost:6379/0"
+    CELERY_RESULT_BACKEND = "redis://localhost:6379/0"
